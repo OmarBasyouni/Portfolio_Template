@@ -1,0 +1,200 @@
+/* ==========================================================
+   1. THEME COLORS - change these to restyle the whole site
+   ========================================================== */
+:root {
+    --primary-color: #2563eb;      /* accent: buttons, links, hover */
+    --text-color: #1f2937;         /* main text */
+    --muted-color: #6b7280;        /* softer text */
+    --background-color: #ffffff;   /* page background */
+    --card-background: #f8fafc;    /* cards and alternate sections */
+    --border-color: #e5e7eb;
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    --radius: 12px;                /* roundness of cards and buttons */
+}
+
+/* ==========================================================
+   2. BASIC RESET AND PAGE DEFAULTS
+   ========================================================== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+    scroll-behavior: smooth;       /* smooth scrolling for nav links */
+    scroll-padding-top: 70px;      /* keeps headings below the sticky navbar */
+}
+
+body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3 { line-height: 1.2; }
+h2 { font-size: 1.9rem; margin-bottom: 1.5rem; }
+p { margin-bottom: 0.75rem; }
+a { color: var(--primary-color); }
+ul { list-style: none; }
+
+/* Centers content and limits its width */
+.container { max-width: 1000px; margin: 0 auto; padding: 0 1.5rem; }
+
+/* Space above and below every section */
+section { padding: 5rem 0; }
+
+/* ==========================================================
+   3. BUTTONS (used in hero, projects, contact)
+   ========================================================== */
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.4rem;
+    border-radius: var(--radius);
+    border: 2px solid var(--primary-color);
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.2s, background-color 0.2s;
+}
+.btn-primary { background-color: var(--primary-color); color: #fff; }
+.btn-primary:hover { opacity: 0.85; }
+.btn-outline { background-color: transparent; color: var(--primary-color); }
+.btn-outline:hover { background-color: var(--card-background); }
+.btn:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* ==========================================================
+   4. NAVIGATION BAR
+   ========================================================== */
+.navbar {
+    position: sticky;              /* stays at the top while scrolling */
+    top: 0;
+    background-color: var(--background-color);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 10;
+}
+.navbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.logo { font-weight: 700; font-size: 1.2rem; color: var(--text-color); text-decoration: none; }
+.nav-links { display: flex; gap: 1.5rem; }
+.nav-links a { color: var(--text-color); text-decoration: none; }
+.nav-links a:hover { color: var(--primary-color); }
+
+/* ==========================================================
+   5. HERO SECTION
+   ========================================================== */
+.hero { padding: 7rem 0; }
+.hero h1 { font-size: 2.6rem; margin-bottom: 0.5rem; }
+.hero-title { font-size: 1.3rem; font-weight: 600; color: var(--primary-color); }
+.hero-text { max-width: 560px; color: var(--muted-color); margin-top: 1rem; }
+.hero-buttons { display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap; }
+
+/* ==========================================================
+   6. ABOUT SECTION
+   ========================================================== */
+.about { background-color: var(--card-background); }
+.about-grid { display: flex; gap: 3rem; align-items: center; }
+.profile-pic {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;             /* crops the photo instead of squashing it */
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+}
+
+/* ==========================================================
+   7. SKILLS SECTION
+   ========================================================== */
+.skills-list { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.skill {
+    padding: 0.5rem 1.1rem;
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+/* ==========================================================
+   8. PROJECTS SECTION
+   ========================================================== */
+.projects { background-color: var(--card-background); }
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);   /* 3 columns on desktop */
+    gap: 1.5rem;
+}
+.project-card {
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    transition: transform 0.2s;
+}
+.project-card:hover { transform: translateY(-4px); }
+.project-card h3 { margin-bottom: 0.75rem; }
+.tech { color: var(--muted-color); font-size: 0.9rem; }
+.card-buttons { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 1rem; }
+.card-buttons .btn { padding: 0.45rem 1rem; font-size: 0.9rem; }
+
+/* ==========================================================
+   9. CONTACT SECTION
+   ========================================================== */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+.contact-form {
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+}
+.contact-form label { display: block; font-weight: 600; margin-bottom: 0.25rem; }
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.65rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+/* ==========================================================
+   10. FOOTER
+   ========================================================== */
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--muted-color);
+}
+.footer p { margin: 0; }
+
+/* ==========================================================
+   11. RESPONSIVE DESIGN
+   ========================================================== */
+
+/* Tablet: 2 project columns, narrower layout */
+@media (max-width: 900px) {
+    .projects-grid { grid-template-columns: repeat(2, 1fr); }
+    .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+/* Mobile: everything stacks. The nav wraps: logo on top, links below it. */
+@media (max-width: 600px) {
+    section { padding: 3.5rem 0; }
+    .hero { padding: 4rem 0; }
+    .hero h1 { font-size: 2rem; }
+    .navbar-inner { flex-direction: column; gap: 0.5rem; }
+    .nav-links { gap: 1rem; flex-wrap: wrap; justify-content: center; }
+    html { scroll-padding-top: 110px; }
+    .about-grid { flex-direction: column; text-align: center; gap: 1.5rem; }
+    .projects-grid { grid-template-columns: 1fr; }
+}

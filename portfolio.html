@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- This line makes the site scale correctly on phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omar Badr | Frontend Developer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ========== 1. NAVIGATION BAR ========== -->
+    <!-- Each link points to a section's id (for example href="#about" -> id="about") -->
+    <header class="navbar">
+        <nav class="container navbar-inner">
+            <a href="#home" class="logo">Omar Badr</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ========== 2. HERO SECTION ========== -->
+        <section class="hero" id="home">
+            <div class="container">
+                <h1>Hi, I'm Omar Badr</h1>
+                <p class="hero-title">Frontend Developer</p>
+                <p class="hero-text">I'm a Computer Engineering student interested in frontend development, user experience, and building practical digital products.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Projects</a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 3. ABOUT SECTION ========== -->
+        <section class="about" id="about">
+            <div class="container about-grid">
+                <!-- Replace assets/profile-placeholder.jpg with your own photo (keep the name or edit src) -->
+                <img src="https://www.google.com/imgres?q=guy&imgurl=https%3A%2F%2Fmedia.glamour.com%2Fphotos%2F569679ce16d0dc3747f0707d%2Fmaster%2Fw_1600%252Cc_limit%2Fsex-love-life-blogs-single-ish-what-type-of-guy-do-you-want.jpg&imgrefurl=https%3A%2F%2Fwww.glamour.com%2Fstory%2Fwhat-type-of-guy-are-you-looki&docid=zcZGoSO-N6iecM&tbnid=wau-tnYNMis6OM&vet=12ahUKEwjOzIG2iaiXAxWEhv0HHWHXAJIQnPAOegUIwQEQAA..i&w=423&h=600&hcb=2&ved=2ahUKEwjOzIG2iaiXAxWEhv0HHWHXAJIQnPAOegUIwQEQAA" alt="Profile picture of Omar Badr" class="profile-pic">
+                <div>
+                    <h2>About Me</h2>
+                    <!-- CHANGE: your bio -->
+                    <p>I'm a Computer Engineering student interested in frontend development, user experience, and building practical digital products.</p>
+                    <p><strong>Education:</strong> Faculty of Engineering, Ain Shams University</p>
+                    <p><strong>Interests:</strong> UX Design, Frontend Development</p>
+                    <p><strong>Location:</strong> Cairo, Egypt</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 4. SKILLS SECTION ========== -->
+        <!-- To add a skill, copy one <li class="skill"> line. To remove one, delete the line. -->
+        <section class="skills" id="skills">
+            <div class="container">
+                <h2>Skills</h2>
+                <ul class="skills-list">
+                    <li class="skill">HTML</li>
+                    <li class="skill">CSS</li>
+                    <li class="skill">JavaScript</li>
+                    <li class="skill">Git</li>
+                    <li class="skill">GitHub</li>
+                    <li class="skill">Java</li>
+                    <li class="skill">C++</li>
+                    <li class="skill">[ADD SKILL]</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ========== 5. PROJECTS SECTION ========== -->
+        <!-- To add a project, copy one whole <article class="project-card"> ... </article> block -->
+        <section class="projects" id="projects">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+
+                    <!-- Project 1 -->
+                    <article class="project-card">
+                        <h3>E-Commerce Website</h3>
+                        <p>A responsive e-commerce website built with modern web technologies.</p>
+                        <p class="tech">Technologies: [HTML, CSS]</p>
+                        <div class="card-buttons">
+                            <a href="[PROJECT URL]" class="btn btn-primary">View Project</a>
+                            <a href="[GITHUB REPO URL]" class="btn btn-outline">GitHub</a>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card">
+                        <h3>Task Management App</h3>
+                        <p>A simple task management application built with React and Node.js.</p>
+                        <p class="tech">Technologies: [React, Node.js]</p>
+                        <div class="card-buttons">
+                            <a href="[PROJECT URL]" class="btn btn-primary">View Project</a>
+                            <a href="[GITHUB REPO URL]" class="btn btn-outline">GitHub</a>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project-card">
+                        <h3>Weather App</h3>
+                        <p>A simple weather application that displays current conditions and forecasts.</p>
+                        <p class="tech">Technologies: [JavaScript, API Integration]</p>
+                        <div class="card-buttons">
+                            <a href="[PROJECT URL]" class="btn btn-primary">View Project</a>
+                            <a href="[GITHUB REPO URL]" class="btn btn-outline">GitHub</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 6. CONTACT SECTION ========== -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2>Contact</h2>
+                <div class="contact-grid">
+
+                    <!-- CHANGE: your social links -->
+                    <div class="contact-info">
+                        <p><strong>Email:</strong> <a href="mailto:22p0242@eng.asu.edu.eg">22p0242@eng.asu.edu.eg</a></p>
+                        <p><strong>GitHub:</strong> <a href="https://github.com/OmarBasyouni">https://github.com/OmarBasyouni</a></p>
+                        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/omarbadrel/?isSelfProfile=true">https://www.linkedin.com/in/omarbadrel/</a></p>
+                    </div>
+
+                    <!--
+                        NOTE: THIS FORM IS VISUAL ONLY.
+                        It has no action and no backend, so it does NOT send messages.
+                        type="button" stops the button from submitting anything.
+                    -->
+                    <form class="contact-form">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Your name">
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="you@example.com">
+
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" placeholder="Your message"></textarea>
+
+                        <button type="button" class="btn btn-primary">Send Message</button>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========== 7. FOOTER ========== -->
+    <footer class="footer">
+        <p>&copy; 2026 Omar Badr. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
